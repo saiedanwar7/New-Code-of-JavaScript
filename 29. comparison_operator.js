@@ -186,13 +186,14 @@ The ?. operator returns undefined if an object is undefined or null (instead of 
 */
 
 const car = {type:"Fiat", model:"500", color:"white"};
-console.log(car?.name);
+console.log(car?.name);   // undefined
 
-console.log(car?.model);
+console.log(car?.model);  // '500'
 
 
 /*
     ------------- The Nullish Coalescing Operator (??) ----------
+
 The ?? operator returns the first argument if it is not nullish (null or undefined).
 
 Otherwise it returns the second argument.
