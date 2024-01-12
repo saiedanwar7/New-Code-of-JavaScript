@@ -81,9 +81,11 @@ let text = "";
 letters2.forEach(function(value){
     console.log(value);   // 'a', 'b', 'c'
 
-    text = value;
+    text +=" "+value;
     console.log(text)
 })
+
+console.log(text)
 
 
 
@@ -102,4 +104,7 @@ let myText = "";
 for(const x of letters.values()){
     console.log(x); // 'a', 'b', 'c'
     console.log(typeof letters); // object
+    myText += x;
 }
+
+console.log(myText);

@@ -23,9 +23,11 @@ for(let i = 1; i < 10; i++){
    
     if(i === 3) {break; }  // i er value 3 step porjonto gele loop theke ber hoye jabe
     console.log(i); // 1, 2
-    text = " The number is: " + i;
+    text += " The number is: " + i;
     console.log(text);
 }
+
+console.log(text)
 
 /*
         ---------------- The Continue Statement -----------------
@@ -41,10 +43,11 @@ let text1 = "";
 for (let i = 0; i < 10; i++){
     if(i === 3) {continue; }
     console.log(i);  // 0, 1, 2, 4, 5, 6, 7, 8, 9
-    text1 = " The number is : " + i;
+    text1 += " The number is : " + i;
     console.log(text1);
 }
 
+console.log(text1);
 
 /*
 

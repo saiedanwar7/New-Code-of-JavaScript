@@ -176,3 +176,4 @@ In the second example, using let, the variable declared in the loop does not red
 When let is used to declare the i variable in a loop, the i variable will only be visible within the loop.
 
 */
+
