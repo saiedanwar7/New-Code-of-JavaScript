@@ -3,7 +3,7 @@
     -   The JavaScript Math object allows you to perform mathematical tasks on numbers.
 
     The Math Object
-Unlike other objects, the Math object has no constructor.
+    Unlike other objects, the Math object has no constructor.
 
 The Math object is static.
 
@@ -32,7 +32,7 @@ Math.LOG10E   // returns base 10 logarithm of E
 */
 
 
-/*-------------- Math Methods
+/*----------------- Math Methods -------------------
 The syntax for Math any methods is : Math.method(number) 
 
 Number to Integer

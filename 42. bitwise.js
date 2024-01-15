@@ -1,12 +1,15 @@
 /*
 
 
-    Joke
-There are only 10 types of people in the world: those who understand binary and those who don't.
+    Joke :
+    ------
+
+    -   There are only 10 types of people in the world: those who understand binary and those who don't.
 
 
 
         JavaScript Uses 32 bits Bitwise Operands
+        
 JavaScript stores numbers as 64 bits floating point numbers, but all bitwise operations are performed on 32 bits binary numbers.
 
 Before a bitwise operation is performed, JavaScript converts numbers to 32 bits signed integers.
