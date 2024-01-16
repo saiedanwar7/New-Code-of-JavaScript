@@ -16,7 +16,7 @@ car         car.name        start()
         
         - 
         - Object er moddhe amra function o value akare dite pari
-        - function ke jokhon amra object er moddhe property akare likhe tokhon seta ke bola hoy object.
+        - function ke jokhon amra object er moddhe property akare likhi tokhon seta ke bola hoy object Method.
 
 const car ={
     name: "BMW",
