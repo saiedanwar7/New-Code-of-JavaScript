@@ -22,6 +22,7 @@ Note:
     -   The let and const keywords were added to JavaScript in 2015.
 
     -   The var keyword should only be used in code written for older browsers.
+
     -   JavaScript identifiers are case-sensitive.
 
 
@@ -59,7 +60,7 @@ z = x + y;
 
 
 /*
-    -   The two variables price1 and price2 are declared with the const keyword.
+----------  The two variables price1 and price2 are declared with the const keyword --------
 
         -   These are constant values and cannot be changed.
 
@@ -74,17 +75,24 @@ const price1 = 5;
 const price2 = 6;
 let total = price1 + price2;
 
+console.log(total);  // 11
+
+
+
 
 /*
----- A variable declared without a value will have the value undefined.  ------
+    ---- A variable declared without a value will have the value undefined  ------
 
-The variable carName will have the value undefined after the execution of this statement:
+    -   The variable carName will have the value undefined after the execution of this statement:
 
 */
 
 let carName;
 
-console.log(carName);
+console.log(carName);   // undefined
+
+
+
 
 /*
 ------------------- Re-Declaring JavaScript Variables -----------------
@@ -99,44 +107,54 @@ console.log(carName);
 var busName = "Volvo";
 var busName;
 
-console.log(busName);
+console.log(busName);     // Volvo
+
+
+
 
 
 /*
-    You cannot re-declare a variable declared with let or const.
+----------- You cannot re-declare a variable declared with (let or const) --------
+    
     This will not work:
-
 
  */
 
 
 // let carName1 = "BMW";
-// let carName1;
+// let carName1;    // error
+
 
 
 let t = 5 + 2 + 3;
-console.log(t);
+console.log(t);   // 10
+
+
 
 
 
 // You can also add strings, but strings will be concatenated:
 
+
 let word = "Jhon" +" " + "Doe";
-console.log(word);
+console.log(word);    // 'Jhon Doe'
+
+
 
 
 // If you put a number in quotes, the rest of the numbers will be treated as strings, and concatenated.
 
 let num1 = 2 + 3 + "5";
 
-console.log(num1);
+console.log(num1);    // '55'
+
 console.log(typeof num1);  // string hoye jabe
 
 
 
 /*
 
-Since JavaScript treats underscore as a letter, identifiers containing _ are valid variable names:
+    - Since JavaScript treats underscore as a letter, identifiers containing _ are valid variable names:
 
 */
 
@@ -145,10 +163,14 @@ let _lastName = "Anwar";
 let _x = 2;
 let _100 =  5;
 
-console.log(_lastName, _x, _100);  
+console.log(_lastName, _x, _100);   // 'Anwar 2 5'
+
+
 
 
 /*
-Using the underscore is not very common in JavaScript, but a convention among professional programmers is to use it as an alias for "private (hidden)" variables.
+
+    -   Using the underscore is not very common in JavaScript, 
+    -   but a convention among professional programmers is to use it as an alias for "private (hidden)" variables.
 
 */
