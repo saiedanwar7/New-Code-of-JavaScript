@@ -1,5 +1,9 @@
 /*
     ======================= JavaScript Arrow Function ==================
+    - Arrow functions were introduced in ES6.
+
+Arrow functions allow us to write shorter function syntax:
+
 */
 
 //--------------- different way of declare function ---------------
@@ -26,6 +30,15 @@ hello = () => {
   }
 
 
+let myFunction = (a, b) => a * b;
+
+
+
+/*
+    ------------------ Arrow Functions Return Value by Default ---------------
+
+
+*/
 
 // eita tokhonei kora jabe jokhon sudu ekta statement return thakbe
 // Note: This works only if the function has only one statement.
@@ -40,9 +53,13 @@ hello = () => "Hello World!";
  }
 
 
+
+
  // If you have parameters, you pass them inside the parentheses
 
 hi = (brother) => "Hello" + brother;
+
+
 
 // In fact, if you have only one parameter, you can skip the parentheses as well
 
