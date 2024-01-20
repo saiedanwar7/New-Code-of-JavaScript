@@ -137,7 +137,7 @@ const person11 = {
   */
 
 
-const person = {
+const new_person = {
   firstName: "John",
   lastName: "Doe",
   fullName: function(){
@@ -152,10 +152,10 @@ const member = {
 }
 
 
-let fullName = person.fullName();
+let fullName = new_person.fullName();
 console.log(fullName);   // John Doe
 
-console.log(person.fullName.bind(member));
+console.log(new_person.fullName.bind(member));
 
 
 
