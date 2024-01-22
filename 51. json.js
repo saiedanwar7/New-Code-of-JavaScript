@@ -65,7 +65,7 @@ let text1 = {"p" :[ {"firstName":"John", "lastName":"Doe"}]}
     -   JSON arrays are written inside square brackets
     -   Just like in JavaScript, an array can contain objects
 
-*/
+
 
     "employees":[
             {"firstName":"John", "lastName":"Doe"},
@@ -73,7 +73,7 @@ let text1 = {"p" :[ {"firstName":"John", "lastName":"Doe"}]}
             {"firstName":"Peter", "lastName":"Jones"}
         ]
 
-
+*/
 
 
 
