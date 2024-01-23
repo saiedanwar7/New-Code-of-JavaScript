@@ -193,4 +193,4 @@ let b = new String("Saied");
 
 let c = a === b;
 
-console.log("Comparing two object return false:", c); // false
+console.log("Comparing two object return :", c); // Comparing two object return : false
