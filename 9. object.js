@@ -1,20 +1,23 @@
-/*----------- JavaScript Objects ------------ */
+
+
+/*=====================  JavaScript Objects =====================*/
 
 /*
-Real Life Objects, Properties, and Methods
-In real life, a car is an object.
 
-- Object ke o variable akare chinta korte pari
-- Object er jonno amra const variable use korbo
+    -   Real Life Objects, Properties, and Methods
+    -   In real life, a car is an object.
 
-A car has properties like weight and color, and methods like start and stop:
+    - Object ke o variable akare chinta korte pari
+    - Object er jonno amra const variable use korbo
 
-Object      Properties     Method
+    A car has properties like weight and color, and methods like start and stop:
 
-car         car.name        start()
-            car.color       break()
+    Object      Properties     Method
+
+    car         car.name        start()
+                car.color       break()
         
-        - 
+        
         - Object er moddhe amra function o value akare dite pari
         - function ke jokhon amra object er moddhe property akare likhi tokhon seta ke bola hoy object Method.
 
@@ -23,10 +26,12 @@ const car ={
     model: 5000,
     weight: "900kg",
     color: "Black",
-    start: function(){
+    start: function(){   // object method
         
     }
 }
+
+
 
 ------------------ JavaScript Object Content Basic ---------------------
 
@@ -42,9 +47,6 @@ const car ={
 */
 
 
-
-/*
-
 const car ={
     name: "BMW",
     model: 5000,
@@ -52,7 +54,7 @@ const car ={
     color: "Black",
     start: function(){
     
-        console.log('car has started')
+        console.log('car has started');    // car has started
     },
 
     // multiple function o thakte parbe
@@ -62,12 +64,12 @@ const car ={
 
 };
 
-console.log(car.color);
+console.log(car.color);       // Black
 console.log(car["model"]);   // array akare o access korte pari object e
 car.start()
 
 
-*/
+
 
 
 
@@ -75,13 +77,13 @@ car.start()
 
 
 /*
-    - this is main ownership
+    - This is main ownership
     - ekta function er moddhe r ekta function ke call kora jabe
 
 */
 
 
-const car ={
+const car1 ={
     name: "BMW",
     model: 5000,
     weight: "900kg",
@@ -93,18 +95,19 @@ const car ={
 
     // multiple function o thakte parbe
     drive: function(){
-        console.log('car is driving')
+        console.log('car is driving');  // car is driving - this is print for this.drive() calling in start function.
     },
 
 };
 
-car.start()
+car1.start()
 
 
 
 
 /*
     ---------------- Do Not Declare Strings, Numbers, and Booleans as Objects! ----------------
+    
     - When a JavaScript variable is declared with the keyword "new", the variable is created as an object:
 
 */
