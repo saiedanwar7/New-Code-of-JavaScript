@@ -2,7 +2,7 @@
 
  - String Metods help you to work with strings. 
 
-    -   String length    - The length property returns the length of a string
+    -   String length       - The length property returns the length of a string
 
     -   String slice()      -   slice() extracts a part of a string and returns the extracted part in a new string
     -   String substring()  -   similar as slice()
@@ -35,7 +35,7 @@ Note:
 Formally said:
 --------------
 
-  - Strings are immutable: Strings cannot be changed, only replaced.
+    - Strings are immutable: Strings cannot be changed, only replaced
 
     ------------- String Methods and Properties ---------------
 
@@ -47,10 +47,10 @@ Formally said:
 
 
 */
-      let x = "jhon";
+      let x = "John";
       let y = new String ("John");
 
-      console.log(x === y);
+      console.log(x === y);   // false
 
 
       const a = {
@@ -61,6 +61,9 @@ Formally said:
 
       const s = "Bangladesh";
       console.log(s.length);   // jokhon eivable properties diye string ke call korbo tokhon seta object hishabe treat korbe like - new String("Bangladesh")
+  
+
+
 
 
 
@@ -104,30 +107,34 @@ let char3 = text.at(-4);  // negative value index
 
 
 
-console.log("charAt vlaue is: ", char);
-console.log("at vlaue is: ", char2); 
-console.log("at vlaue is: ", char3); 
+console.log("charAt vlaue is: ", char);  // O
+console.log("at vlaue is: ", char2);     // L
+console.log("at vlaue is: ", char3);     // O 
+
+
 
 
 //-----------------  String charCodeAt()  ---------------
 
 let myName = "Saied Anwar";
 
-let nameValue = myName.charCodeAt(1); // a ascii code 
+let nameValue = myName.charCodeAt(1); // 1 is index number - a ascii code 
 
-console.log("a ascii value is : ", nameValue);
+console.log("a ascii value is : ", nameValue);   // a ascii value is: 97
+
+
 
 
 
 //=================== Property Access [ ] =================
 
 let text1 = "Hello World";
-let char1 = text1[20]
-console.log("Zero char is: ",char1);
+let char1 = text1[10]
+console.log("The char is: ",char1);   // The char is: d, if not found return undefined
 
 /*
-Note
------
+  Note
+  -----
 
   - Property access might be a little unpredictable
   - It makes strings look like arrays (but they are not)
@@ -143,7 +150,7 @@ Note
 
 
 
-/* ---------------  Extracting String Parts   ---------------
+/* -------------------------  Extracting String Parts   -------------------------
 
 There are 3 methods for extracting a part of a string:
 
@@ -185,7 +192,7 @@ let part = txt.slice(7, 13);
 console.log("The slice part is: ", part);   // The slice part is : Banana
 
 
-// if you omit the second parameter, the method will slice out the rest of the string
+// if you not put the second parameter, the method will slice out the rest of the string
 
 let text2 = "Apple, Banana, Kiwi";
 let part2 = text2.slice(7);  // 7 theke porer gula nibe
@@ -220,7 +227,8 @@ console.log(part3);  // Banana
 let str1 = "Apple, Banana, Kiwi";
 let part1 = str1.substring(7, 13);
 
-console.log(part1);
+console.log(part1);   // Banana
+
 
 
 /*
@@ -248,6 +256,9 @@ console.log(part4);
 
 let part5 = str.substr(7);  // second parameter
 console.log(part5);
+
+
+
 
 
 
@@ -287,7 +298,7 @@ console.log(toUpper);
 let txt1 = "Saied";
 let txt2 = "Anwar";
 let txt3 = txt1.concat(" ", txt2);
-console.log(txt3);
+console.log(txt3);   // Saied Anwar
 
 
 
@@ -333,21 +344,26 @@ console.log(my_text.trimStart());  //  'Hello World  '
 
 */
 
-let char5 = "Hi";
+let char5 = "Hi ";
 let result1 = char5.repeat(6);
-console.log(result1);
+console.log(result1);  // Hi Hi Hi Hi Hi Hi
+
+
+
 
 
 /*
+
 Note  :
 -------
-The replace() method does not change the string it is called on.
 
-The replace() method returns a new string.
+  - The replace() method does not change the string it is called on.
 
-The replace() method replaces only the first match
+  - The replace() method returns a new string.
 
-If you want to replace all matches, use a regular expression with the /g flag set. See examples below.
+  - The replace() method replaces only the first match
+
+  If you want to replace all matches, use a regular expression with the /g flag set. See examples below.
 
 
 */
@@ -358,13 +374,16 @@ If you want to replace all matches, use a regular expression with the /g flag se
 let replace_word = "Please visit Microsoft and Microsoft!";
 let newText = replace_word.replace("Microsoft", "W3Schools");
 
-// console.log(newText);
+console.log(newText);   // Please visit W3Schools and Microsoft!
+
+
 
 
 // By default, the replace() method is case sensitive. Writing MICROSOFT (with upper-case) will not work:
 
 let newText2 = replace_word.replace("MICROSOFT", "W3Schools");
 console.log(newText2);  // It's not work
+
 
 
 //To replace case insensitive, use a regular expression with an /i flag (insensitive):
@@ -387,8 +406,10 @@ let newText1 = "I love cats. Cats are very easy to love. Cats are very popular."
 let changeText = newText1.replaceAll("Cats", "Dogs");
 let changeText2 = newText1.replaceAll("cats", "dogs");
 
-console.log(changeText);
-// console.log(changeText2);
+console.log(changeText);   // I love cats. Dogs are very easy to love. Dogs are very popular.
+console.log(changeText2);  // I love dogs. Cats are very easy to love. Cats are very popular.
+
+
 
 
 
@@ -398,12 +419,13 @@ console.log(changeText);
 
 /*
 -------------------- JavaScript String split()  -------------------
+
 A string can be converted to an array with the split() method
 
 */
 
 let sWord = "Hello World";
-console.log(sWord.split(" ")); // ['Hello', 'World']
+console.log(sWord.split(" ")); //  return array with word ['Hello', 'World']
 console.log(sWord.split(""));  // return a array seperate charachter
 
 // ['H', 'e', 'l', 'l', 'o', ' ', 'W', 'o', 'r', 'l', 'd']
