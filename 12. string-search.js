@@ -16,7 +16,8 @@ String endsWith()
 
 
 /*
-avaScript String indexOf()
+    ----------------------- JavaScript String indexOf() ----------------------
+
 - The indexOf() method returns the index (position) of the first occurrence of a string in a string, 
 - or it returns -1 if the string is not found:
 
@@ -28,10 +29,13 @@ console.log(index); // 7
 
 
 /*
-Note
-JavaScript counts positions from zero.
 
-0 is the first position in a string, 1 is the second, 2 is the third, ...
+    Note :
+    -------
+    
+    JavaScript counts positions from zero.
+
+    0 is the first position in a string, 1 is the second, 2 is the third, ...
 
 */
 
@@ -66,6 +70,9 @@ meaning: if the second parameter is 15, the search starts at position 15, and se
 let text3 = "Please locate where 'locate' occurs!";
 let index4 = text3.lastIndexOf("locate", 15);
 console.log(index4);  //7
+
+
+
 
 /*
 JavaScript String search()

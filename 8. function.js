@@ -47,13 +47,14 @@
     2. -------------- Function Invocation -------------------
 
 
-    -   The code inside the function will execute when "something" invokes (calls) the function:
+    The code inside the function will execute when "something" invokes (calls) the function:
+
     -   When an event occurs (when a user clicks a button)
     -   When it is invoked (called) from JavaScript code
     -   Automatically (self invoked)
 
 
-    3. -------------- Function Return -----------------------
+    3. ------------------ Function Return --------------------------
 
 
     -   When JavaScript reaches a return statement, the function will stop executing.
@@ -63,7 +64,7 @@
     -   Functions often compute a return value. The return value is "returned" back to the "caller":
 
 
-        --------------- Local Variables ----------------------
+        -------------------- Local Variables ------------------------
     
     -   Variables declared within a JavaScript function, become LOCAL to the function.
 
@@ -71,9 +72,7 @@
 
     -   Local variables are created when a function starts, and deleted when the function is completed.
 
-
-
-
+    
 */
 
 
@@ -107,10 +106,10 @@ sleep2("Saied")   // Jasim is sleeping from 10 PM
 // parameter use kore je kono vabe print korte parbo
 
 function sleep3(name){
-    console.log(name + " is sleeping from 10 PM");
+    console.log(name + " is sleeping from 10 PM");  // jasim/korim/Saied is sleeping from 10 PM
 }
 
-sleep3("jasim")
+sleep3("jasim");
 sleep3("korim")
 sleep3("Saied")
 
@@ -120,8 +119,8 @@ sleep3("Saied")
 
 
 /* 
- - most important thing is : Always think function is a like variable
- - function work like a variable
+ -      Most important thing is : Always think function is a like variable
+ -      Function work like a variable
 
 */ 
 
@@ -132,17 +131,17 @@ sleep3("Saied")
 /*
  
  - Name, time ei gula hocche perameter
- - r sleep3 te je value gula deya hocche name and time er eigula hocche arguments
+ - r sleep4 te je value gula deya hocche name and time er eigula hocche arguments
 
  */
 
-  function sleep4(name, time){
+  function sleep4(name, time) {
     console.log(name + " is sleeping from " + time);
 }
 
-sleep4("jasim", "11 PM")
-sleep4("korim", "12 PM")
-sleep4("Saied", "2 AM")
+sleep4("jasim", "11 PM");
+sleep4("korim", "12 PM");
+sleep4("Saied", "2 AM");
 
 
 
@@ -150,19 +149,21 @@ sleep4("Saied", "2 AM")
 /* 
 
     - Javascript return er pore r kisu print korbe na
-    - tai return er pore kono kisu na lekhai valo
+    - So it's better to nothing write after return function
+
 
 
 */
 
 function sleep5(name, time){
-    console.log(name + " is sleeping from " + time);
-    return 5;
-    console.log(6);     // not print
+  console.log(name + " is sleeping from " + time);
+  return sleep5;
+  console.log(6);     // not print
 }
 
 sleep5('Josim', "12 PM")
-console.log(4);
+console.log(4);  
+
 
 /*
 -------- output -------
@@ -176,17 +177,18 @@ Josim is sleeping from 12 PM
 
 
 /*
- - jodi kono function return kore taholei seta kono variable e store kora jabe na, return na korle seta kora jabe na
+ - jodi kono function return kori taholei seta kono variable e store kora jabe, return na korle seta kora jabe na
  -  
 
 */
 
 function myFunction1(a1, b1){
-    return a1 + b1
+  return a1 + b1
 }
 
 let x1 = myFunction1(4, 3)
-console.log(x1)
+  console.log(x1)
+
 
 
 
@@ -196,24 +198,24 @@ console.log(x1)
 */
 
 function myFunction(a, b){
-    console.log("hello")
+  console.log("hello")
     //return a + b  
     // return undefined;   return na korle javascript by default eikhan theke undefined kore de
 
 }
 
 let x = myFunction(4, 3)
-console.log(x)   // undefined
+  console.log(x)   // undefined
 
 
 
 /*
-  - paranthesis () chara function call kora hole sudu function body ta return korbe, 
+  - Paranthesis () chara function call kora hole sudu function body ta return korbe, 
     jeta ekta object akare show kore
  */
 
 function newFunction(c, d){
-    return c + d;
+  return c + d;
 }
 
 let t = newFunction;
@@ -224,11 +226,15 @@ console.log(t)
 // }
 
 
+
+
+
+
 /* 
 
-1. =========== Local Variables ============
+1. ---------------------------- Local Variables  ------------------------------
 
- - Variables declared within a JavaScript function, become LOCAL to the function.
+ - Variables declared within a JavaScript function, become LOCAL variable of the function.
  - Local variables can only be accessed from within the function.
  - var let jai use kori same result
 
@@ -243,14 +249,12 @@ localFunction()
 console.log(carName); // Uncaught ReferenceError: carName is not defined
 
 
-
 /*
 
-    - function er baire jodi alada kore same variable ta o declear kori ta o function er bitorer 
+    - Function er baire jodi alada kore same variable ta o declear kori ta o function er bitorer 
       variable e access pabe na sudu bairer variable er value print korbe
-
-
 */
+
 
 let carName1 = "BMW"
 
@@ -268,14 +272,14 @@ console.log(carName1); // BMW
     - defferent function er moddhe same name e variable use korte parbo 2ta alada alada jaiga
 */
 
-function localFunction2(){
-    let busName = "Starline"
-    console.log(busName);
+function localFunction2() {
+  let busName = "Starline"
+  console.log(busName);
 }
 
-function localFunction3(){
-    let busName = "ANA"
-    console.log(busName);
+function localFunction3() {
+  let busName = "ANA"
+  console.log(busName);
 }
 
 localFunction2();
