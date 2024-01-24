@@ -420,7 +420,7 @@ console.log(changeText2);  // I love dogs. Cats are very easy to love. Cats are 
 /*
 -------------------- JavaScript String split()  -------------------
 
-A string can be converted to an array with the split() method
+  - A string can be converted to an array with the split() method
 
 */
 
