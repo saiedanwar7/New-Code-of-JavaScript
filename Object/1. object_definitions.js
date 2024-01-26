@@ -21,30 +21,31 @@
 /*
     --------------------- JavaScript Primitives ---------------------
 
-    JavaScript Primitives
-A primitive value is a value that has no properties or methods.
+    -   A primitive value is a value that has no properties or methods.
 
-3.14 is a primitive value
+                let x = 3.14  (is a primitive value)
 
-A primitive data type is data that has a primitive value.
+    -   A primitive data type is data that has a primitive value.
 
-JavaScript defines 7 types of primitive data types:
+    
+    JavaScript defines 7 types of primitive data types:
 
-    Examples    ;
-    -------------
-string
-number
-boolean
-null
-undefined
-symbol
-bigint
+                Examples    :
+                -------------
+                1.  string
+                2.  number
+                3.  boolean
+                4.  null
+                5.  undefined
+                6.  symbol
+                7.  bigint
 
 
--------------- Immutable -------------
-Primitive values are immutable (they are hardcoded and cannot be changed).
+        --------------------- Immutable ---------------------------
 
-if x = 3.14, you can change the value of x, but you cannot change the value of 3.14.
+        Primitive values are immutable (they are hardcoded and cannot be changed).
+
+        if x = 3.14, you can change the value of x, but you cannot change the value of 3.14.
 
 
 */
@@ -61,15 +62,26 @@ number = 4;
 
 console.log(number);   // 4  value tai change hoye geche
 
-
 /*
-Value	Type	Comment
-"Hello"	string	"Hello" is always "Hello"
-3.14	number	3.14 is always 3.14
-true	boolean	true is always true
-false	boolean	false is always false
-null	null (object)	null is always null
-undefined	undefined	undefined is always undefined
+
+
+
+
+
+            Value              	Type                	Comment
+        ----------------     ---------------     --------------------    
+            
+            "Hello"         	string	            "Hello" is always "Hello"
+            
+             3.14           	number          	3.14 is always 3.14
+
+             true           	boolean	            true is always true
+
+             false          	boolean         	false is always false
+
+             null           	null (object)   	null is always null
+
+            undefined	        undefined	        undefined is always undefined
 
 
 */
@@ -77,16 +89,20 @@ undefined	undefined	undefined is always undefined
 
 
 /*
-Objects are Variables
-JavaScript variables can contain single values:
 
-JavaScript variables can also contain many values.
+    -----------------------     Objects are Variables   ---------------------
 
-Objects are variables too. But objects can contain many values.
+    -   JavaScript variables can contain single values:
 
-Object values are written as name : value pairs (name and value separated by a colon).
+    -   JavaScript variables can also contain many values.
+
+    -   Objects are variables too. But objects can contain many values.
+
+    -   Object values are written as name : value pairs (name and value separated by a colon).
 
 */
+
+
 
 let person1 = "Saied Anwar";
 
@@ -96,63 +112,88 @@ const person2 = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
 // It is a common practice to declare objects with the const keyword.
 
 
-/*-------------------- Object Properties
-The named values, in JavaScript objects, are called properties.
 
-Property	Value
-firstName	John
-lastName	Doe
-age	50
-eyeColor	blue */
+
+/*     ------------------------- Object Properties ----------------------
+
+    -   The named values, in JavaScript objects, are called properties.
+
+                        Property	 Value
+                        ---------- ---------
+                        firstName	 John
+
+                        lastName	 Doe
+
+                        age	         50
+
+                        eyeColor	 blue 
+
+*/
+
+
 
 
 
 
 /*
-    Object Methods
-Methods are actions that can be performed on objects.
+    ----------------------  Object Methods  -------------------------
 
-Object properties can be both primitive values, other objects, and functions.
+    -   Methods are actions that can be performed on objects.
 
-An object method is an object property containing a function definition.
+    -   Object properties can be both primitive values, other objects, and functions.
 
-Property	Value
-firstName	John
-lastName	Doe
-age	50
-eyeColor	blue
-fullName	function() {return this.firstName + " " + this.lastName;}
+    -   An object method is an object property containing a function definition.
+
+                Property	Value
+                ---------- ---------
+                firstName	John
+
+                lastName	Doe
+
+                age	        50
+
+                eyeColor	blue
+
+                fullName	function() {return this.firstName + " " + this.lastName;}
 
 
-// JavaScript objects are containers for named values, called properties and methods.
+                JavaScript objects are containers for named values, called properties and methods.
+
+
 */
 
 
 
 /*
-Creating a JavaScript Object
-With JavaScript, you can define and create your own objects.
+    --------------------------  Creating a JavaScript Object  --------------------
 
-There are different ways to create new objects:
+    -   With JavaScript, you can define and create your own objects.
 
-Create a single object, using an object literal.
-Create a single object, with the keyword new.
-Define an object constructor, and then create objects of the constructed type.
-Create an object using Object.create().
-Using an Object Literal
-This is the easiest way to create a JavaScript Object.
+    There are different ways to create new objects:
 
-Using an object literal, you both define and create an object in one statement.
+    -   Create a single object, using an object literal.
 
-An object literal is a list of name:value pairs (like age:50) inside curly braces {}.
+    -   Create a single object, with the keyword new.
 
-The following example creates a new JavaScript object with four properties:
+    -   Define an object constructor, and then create objects of the constructed type.
 
-Example
-const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+    -   Create an object using Object.create().
+
+    ------- Using an Object Literal ----------
+
+    -   This is the easiest way to create a JavaScript Object.
+
+    Using an object literal, you both define and create an object in one statement.
+
+    An object literal is a list of name:value pairs (like age:50) inside curly braces {}.
+
 
 */
 
+
+// The following example creates a new JavaScript object with four properties:
+
+const newPerson = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
 
 
 
@@ -165,6 +206,7 @@ const person3 = {
 };
 
 
+
 // This example creates an empty JavaScript object, and then adds 4 properties:
 
 const person4 = {};
@@ -175,12 +217,30 @@ person4.age = 26;
 console.log(person4);
 
 
+/*
+    ----------------------- keyword new -----------------------
+
+    - The following example create a new JavaScript object using new Object(), and then adds 4 properties:
+
+*/
+
+const myName = new Object();
+
+myName.firstName = "Saied";
+myName.lastName = "Anwar";
+myName.age = 50;
+myName.eyeColor = "Black";
+
+console.log(myName); 
+
+
 
 /*
-    ----------------------------- JavaScript Objects are Mutable
-Objects are mutable: They are addressed by reference, not by value.
+    ----------------------------- JavaScript Objects are Mutable  ----------------------
 
-If person is an object, the following statement will not create a copy of person: 
+    -   Objects are mutable: They are addressed by reference, not by value.
+
+    -   If person is an object, the following statement will not create a copy of person: 
 
 
 */
@@ -193,7 +253,12 @@ const person5 = {
   }
   
   const x = person5;
-  x.age = 10;      // Will change both x.age and person.age
+  x.age = 10;      
+
+  // Will change both x.age and person.age
+  
+console.log(person5);
+console.log(x);
 
 /*
      -  The object x is not a copy of person. It is person. Both x and person are the same object.
