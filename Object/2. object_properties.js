@@ -26,20 +26,25 @@ person.country = "Bangladesh";
 
 console.log(person);
 
+console.log(person.name); // print name propertis value - Saied
+
+
 
 /*
     
-Accessing JavaScript Properties
-The syntax for accessing the property of an object is:
+  --------------------------- Accessing JavaScript Properties ----------------------
 
-objectName.property      // person.age
-or
+  -   The syntax for accessing the property of an object is:
 
-objectName["property"]   // person["age"]
-or
+          objectName.property      // person.age
+          
 
-objectName[expression]   // x = "age"; person[x]
-The expression must evaluate to a property name.
+          objectName["property"]   // person["age"]
+          
+
+          objectName[expression]   // x = "age"; person[x]
+
+          The expression must evaluate to a property name.
 
 */
 
@@ -50,16 +55,24 @@ console.log(person.name);  // Saied
 
 
 
-/* -------------------- JavaScript for...in Loop
-The JavaScript for...in statement loops through the properties of an object.
 
-Syntax
-for (let variable in object) {
-  // code to be executed
-}
-The block of code inside of the for...in loop will be executed once for each property.
 
-Looping through the properties of an object:
+
+/*  --------------------------- JavaScript for...in Loop   -----------------------------
+
+    - The JavaScript for...in statement loops through the properties of an object.
+
+        Syntax :
+        --------
+
+        for (let variable in object) {
+          // code to be executed
+        }
+
+
+    - The block of code inside of the for...in loop will be executed once for each property.
+
+    Looping through the properties of an object:
 
 
 
@@ -74,19 +87,23 @@ const person1 = {
   let text = '';
 
   for (let x in person1) {
-    console.log(x);   // print all property name
-    console.log(person1[x]);   // print all value and property
+    console.log(x);            // print all property name
+
+    console.log(person1[x]);   // print all value 
+
     text += person1[x];
   };
 
   console.log(text);
 
 
+
+
   /* ------------------- Adding New Properties -----------------
-You can add new properties to an existing object by simply giving it a value.
 
-Assume that the person object already exists - you can then give it new properties:
+    -   You can add new properties to an existing object by simply giving it a value
 
+    -   Assume that the person object already exists - you can then give it new properties:
 
 */
 
@@ -108,35 +125,40 @@ const person2 = {
 
 
 
-  /* --------------- Deleting Properties -----------
+  /* --------------------- Deleting Properties ---------------------
   
-  // - The delete keyword deletes a property from an object:
+  
+   - The delete keyword deletes a property from an object:
 
-  The delete keyword deletes both the value of the property and the property itself.
+  - The delete keyword deletes both the value of the property and the property itself
 
-After deletion, the property cannot be used before it is added back again.
+  - After deletion, the property cannot be used before it is added back again.
 
-The delete operator is designed to be used on object properties. It has no effect on variables or functions.
+  - The delete operator is designed to be used on object properties. It has no effect on variables or functions.
 
-The delete operator should not be used on predefined JavaScript object properties. It can crash your application.
+  - The delete operator should not be used on predefined JavaScript object properties. It can crash your application.
 
-  */
+*/
 
 
-   delete person2.age;
-//    delete person["age"];
-   console.log(person2);
+  
+
+delete person2.age;
+
+// delete person["age"];
+
+console.log(person2);
 
 
 
 
 /*
- ----------------------  Nested Objects  ---------------------
+    ----------------------  Nested Objects  ------------------------
 
-Values in an object can be another object:
-
+    -   Values in an object can be another object:
 
 */
+
 
 myObj = {
     name:"John",
@@ -146,7 +168,8 @@ myObj = {
       car2:"BMW",
       car3:"Fiat"
     }
-  }
+}
+
 
 // You can access nested objects using the dot notation or the bracket notation:
 
@@ -156,13 +179,15 @@ console.log(myObj["cars"]["car3"]);  // Fiat
 
 
 
+
+
 /* -------------------- Nested Arrays and Objects
 Values in objects can be arrays, and values in arrays can be objects: 
 
 
 
 */
-
+// object > array > object > array
 
 const myObj2 = {
     name: "John",
@@ -174,11 +199,22 @@ const myObj2 = {
     ]
   }
 
-// Array te for in loop use korle index gula return kore
 
-for (let i in myObj2.cars){
-    console.log(i);   // return index 0, 1, 2
+// Array te -- for in loop   use korle index gula return kore
+
+for (let i in myObj2) {
+    console.log(i);         // return korbe object string index gula - 'name', 'age', 'cars' 
+
+    console.log(myObj2[i])   // index and value 
+  }
+
+for (let j in myObj2.cars) {
+  // console.log(j);    // return index 
+
+  console.log(myObj2.cars[j])
 }
+
+
 
 // Object er belai for in korle Element gula return kore
 
@@ -187,11 +223,14 @@ for (let i in myObj2){
 }
 
 
+
+
+
 /* ---------------------- Property Attributes ---------------
 
-All properties have a name. In addition they also have a value.
+  -   All properties have a name. In addition they also have a value.
 
-The value is one of the property's attributes. 
+  -   The value is one of the property's attributes. 
 
 
 */
@@ -201,17 +240,20 @@ The value is one of the property's attributes.
 /*
     ----------------------- Prototype Properties ---------------------
 
-    Prototype Properties
-JavaScript objects inherit the properties of their prototype.
+      -   Prototype Properties
 
-The delete keyword does not delete inherited properties, but if you delete a prototype property, it will affect all objects inherited from the prototype.
+      JavaScript objects inherit the properties of their prototype.
+
+      The delete keyword does not delete inherited properties, but if you delete a prototype property, it will affect all objects inherited from the prototype.
 
 */
 
 let a = new String("Bangladesh");
 
 console.log(a.toUpperCase());   // toUpperCase eigula ashce string prototype theke
-console.dir(a);   // Capital String Object er moddhe sob details thake
+console.dir(a);                 // Capital String Object er moddhe sob details thake
+
+
 
 const myObj3 = {
     name: "John",
@@ -225,6 +267,7 @@ const myObj3 = {
   console.dir(myObj3);
 
   delete myObj3.age;
+
   console.dir(myObj3);
 
   // prototype gula te kisu kora jabe na...eigula build-in  - console.dir(object_name) - diye dekha jabe
