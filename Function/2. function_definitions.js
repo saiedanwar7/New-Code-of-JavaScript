@@ -6,14 +6,14 @@
     You can use a function declaration or a function expression.
 
 
-    1. Function Declarations
-    2. Function Expressions
-    3. Function() Constructor
-    4. Function Hoisting
-    5. Self-Invoking Functions
-    6. Functions Can Be Used as Values
-    7. Functions are Objects
-    8. Arrow Functions
+    - Function Declarations
+    - Function Expressions
+    - Function() Constructor
+    - Function Hoisting
+    - Self-Invoking Functions
+    - Functions Can Be Used as Values
+    - Functions are Objects
+    - Arrow Functions
 
 */
 
