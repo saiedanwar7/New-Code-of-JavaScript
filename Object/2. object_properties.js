@@ -264,10 +264,10 @@ const myObj3 = {
       {name:"Fiat", models:["500", "Panda"]}
     ]
   }
-  console.dir(myObj3);
+console.dir(myObj3);
 
-  delete myObj3.age;
+delete myObj3.age;
 
-  console.dir(myObj3);
+console.dir(myObj3);
 
-  // prototype gula te kisu kora jabe na...eigula build-in  - console.dir(object_name) - diye dekha jabe
+// prototype gula te kisu kora jabe na...eigula build-in  - console.dir(object_name) - diye dekha jabe

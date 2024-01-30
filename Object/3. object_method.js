@@ -1,6 +1,12 @@
 /* ======================= JavaScript Object Methods ====================
 
+  - JavaScript methods are actions that can be performed on objects.
+  - A JavaScript method is a property containing a function definition.
+  - Methods are functions stored as object properties.
 
+    ------ Property ----          ---- Value -------
+
+    fullName	               function() {return this.firstName + " " + this.lastName;}
 
 
 What is this?
@@ -21,18 +27,25 @@ Methods like call(), apply(), and bind() can refer this to any object.
 
 */
 
-const person = {
-    firstName: "John",
-    lastName: "Doe",
-    id: 5566,
-    // method
-    fullName: function() {
-      return this.firstName + " " + this.lastName;
-    }
-  };
 
-  console.log(person.fullName());  // John Doe
+/*
 
+  -----------------------  Accessing Object Methods  ----------------------
+
+  - You access an object method with the following syntax:
+
+        objectName.methodName()
+
+  - You will typically describe fullName() as a method of the person object, and fullName as a property.
+
+  - The fullName property will execute (as a function) when it is invoked with ().
+
+  This example accesses the fullName() method of a person object:
+
+*/
+
+
+// name = person.fullName();
 
 // If you access the fullName property, without (), it will return the function definition:
 
@@ -41,6 +54,11 @@ console.log(typeof person.fullName);  // function
 
 // More details 
 console.dir(person.fullName);
+
+
+
+
+
 
 
 /* ---------------------- Adding a Method to an Object  -----------------
@@ -75,3 +93,19 @@ person1.name = function () {
 };
 
 console.log(person1.name());  // JOHN DOE
+
+
+
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  id: 5566,
+  // method
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+};
+
+console.log(person.fullName());  // John Doe
+
+
