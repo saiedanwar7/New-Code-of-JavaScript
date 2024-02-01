@@ -90,7 +90,7 @@ function myFunction() {
 
 */
 
-//--------------------- Not work --------------------
+// --------------------- Not work --------------------
 
 // Initiate counter
 let counter = 0;
@@ -104,6 +104,7 @@ function add() {
 add();
 add();
 add();
+
 
 // The counter should now be 3
 
@@ -164,6 +165,7 @@ console.log(counter1);   // 0 -- bar bar 0 hoye jabe
 */
 
 // Function to increment counter
+
 function add() {
     let counter = 0;
     counter += 1;
@@ -174,6 +176,7 @@ function add() {
   add();
   add();
   add();
+  console.log(counter);  // 1
   
   // The counter should now be 3. But it is 1.
 
