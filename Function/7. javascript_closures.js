@@ -9,16 +9,7 @@
 
 */
 
-/*
-    Note:
-    -----
-    -   Variables created without a declaration keyword (var, let, or const) are always global, even if they are created inside a function.
 
-    function myFunction() {
-    a = 4;
-    }
-
-*/
 
 /*
     ------------------------ Variable Lifetime -------------------------
@@ -28,15 +19,10 @@
 
 */
 
-/* ------------------ Global Variables -------------------------
 
-    -   function can access all variables defined inside the function, like this:
+/*       ------------------------ Global Variables -------------------------
 
-
-*/
-
-/*
-    -   a is a global variable.
+    -   This a is a global variable.
 
     -   In a web page, global variables belong to the page.
 
@@ -54,6 +40,8 @@ console.log(a);   // 4
 
 /* ---------------------- local variable ---------------------------
 
+    -   A function can access all variables defined inside the function, like this:
+
     -   This a is a local variable.
 
     -   A local variable can only be used inside the function where it is defined. It is hidden from other functions and other scripting code.
@@ -61,22 +49,49 @@ console.log(a);   // 4
     Global and local variables with the same name are different variables. Modifying one, does not modify the other.
 
 */
+
 function myFunction() {
     let a = 4;       // ei function er moddhe - a ke access korte parbo 
     return a * a;
 }
 
 
-// But a function can also access variables defined outside the function, like this:
-
 /*
-    --------------------- A Counter Dilemma
-Suppose you want to use a variable for counting something, and you want this counter to be available to all functions.
-
-You could use a global variable, and a function to increase the counter: 
-
+    Note :
+    
+    -   Variables created without a declaration keyword (var, let, or const) are always global, even if they are created inside a function.
 
 */
+
+function myFunction() {
+    a = 4;
+}
+
+
+
+
+
+
+/*   
+    ======= Here is a Start the our problem that's why we used closures function in the end =======
+
+    -   ekta counter er value change korar way te amra closure er concept ta bujbo
+
+*/
+
+
+/*
+    1. --------------------- A Counter Dilemma -------------------------- 
+
+
+    -   Suppose you want to use a variable for counting something, and you want this counter to be available to all functions.
+
+    -   You could use a global variable, and a function to increase the counter: 
+
+*/
+
+//--------------------- Not work --------------------
+
 // Initiate counter
 let counter = 0;
 
@@ -93,8 +108,10 @@ add();
 // The counter should now be 3
 
 // There is a problem with the solution above: Any code on the page can change the counter, without calling add().
-// Amara sudu chai je sudu add() function ke call kore counter er value barabo, kintu eita abar define korleo change hoye jai, eita amra chai na.
-// amra chaile nije theke change kore pelte pari like:
+// Amara sudu chai je just add() function ke call korei counter er value change barabo, 
+// kintu jodi eita abar define korleo, counter er value change hoye jai, eita amra chai na.
+
+// look amra chaile nije theke change kore pelte pari like:
 
 // counter = 4;
 counter++;
@@ -104,19 +121,23 @@ console.log(counter);   // Now counter value is 4. So this is a problem
 
 
 
+
+
 /* 
+    2. ------------------------ Counter value local --------------------- Not work
 
     -   The counter should be local to the add() function, to prevent other code from changing it:
     -   amra chai je counter ta sudu local thake and add() function sudu seta call kore change korte parbe 
 
 */
 
+
 // Initiate counter
 let counter1 = 0;
 
 // Function to increment counter
 function add() {
-  let counter1 = 0;
+  let counter1 = 0;     //  add counter local value
   counter1 += 1;
 }
 
@@ -127,15 +148,16 @@ add();
 
 console.log(counter1);   // 0 -- bar bar 0 hoye jabe
 
-//The counter should now be 3. But it is 0
-// karon amra eivabe amra global counter ke call kortechi..so that's a problem, not solution
+//  The counter should now be 3. But it is 0
+// karon amra eivabe global counter ke call kortechi.. tai bar bar 0 hoye jacche counter er value, so that's a problem, not solution
+// It did not work because we display the global counter instead of the local counter.
 
 
 
 
-/*
 
-    -   It did not work because we display the global counter instead of the local counter.
+/*  
+     3. ---------------------- remove the Global counter varibale -------------------- Not work
 
     -   We can remove the global counter and access the local counter by letting the function return it:
 
@@ -153,22 +175,25 @@ function add() {
   add();
   add();
   
-  //The counter should now be 3. But it is 1.
+  // The counter should now be 3. But it is 1.
 
-  // it also did not work every time counter value is 1
+  // it also did not work every time counter value set is 1
   // It did not work because we reset the local counter every time we call the function.
 
 
 
+
+
 /*
- --------------------------- JavaScript Nested Functions ---------------------
- All functions have access to the global scope.  
+    4.  --------------------------- JavaScript Nested Functions --------------------- Not work
 
-In fact, in JavaScript, all functions have access to the scope "above" them.
+    -   All functions have access to the global scope.  
 
-JavaScript supports nested functions. Nested functions have access to the scope "above" them.
+    -   In fact, in JavaScript, all functions have access to the scope "above" them.
 
-In this example, the inner function plus() has access to the counter variable in the parent function:
+    -   JavaScript supports nested functions. Nested functions have access to the scope "above" them.
+
+    -   In this example, the inner function plus() has access to the counter variable in the parent function:
 
 
 */
@@ -181,22 +206,29 @@ function add() {
     return counter;
   }
 
+//   plus();   // Error - plus is not defined
+
+
   //     eita o solve korte pare nai...karon plus() function ke amra baire theke access korte parbo na.
   //     This could have solved the counter dilemma, if we could reach the plus() function from the outside.
   //     We also need to find a way to execute counter = 0 only once.
-  //     We need a closure.
+
+  //     So We need a closure.
 
 
 
-0
+
 
 
 /*
-    ----------------------- JavaScript Closures ------------------------------
+    ======================  JavaScript Closures  ========================
 
     -   Remember self-invoking functions? What does this function do?
-    -   function any type of data return korte pare, javascript function hocche object, seta ekta function o return korte pare.
-    -   directly anonymous function return korte pari, kono name thakbe na
+
+    -   Function any type of data return korte pare, javascript function hocche object, seta ekta function o return korte pare.
+
+    -   Directly anonymous function return korte pari, kono name thakbe na
+
     -   A closure is a function having access to the parent scope, even after the parent function has closed.
 
 */
@@ -204,14 +236,14 @@ function add() {
 
 
 function temporary() {
-    let counter4 = 0;   // eita global variable hishabe kaj korbe but javascript temporary onno jaigai use korbe
+    let counter4 = 0;    // eita global variable hishabe kaj korbe but javascript temporary onno jaigai use korbe
 
     return function() {  // closure function/ having access to the parent scope
         counter4 += 1;
     }
 }
 
-const additions = temporary();   // add is a funciton at the end, closed parent function temporary();
+const additions = temporary();   // add is a funciton at the end, Now closed parent function temporary();
 
   // this mean we call - counter += 1
 
