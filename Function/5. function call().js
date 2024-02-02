@@ -1,6 +1,5 @@
 
-
-
+/* ========================= JavaScript Function Call() ==================== */
 
 
 
@@ -10,7 +9,7 @@
     Method Reuse :
     
     -   With the call() method, you can write a method that can be used on different objects.
-     -   1 ta object ke onno object er method er value hishbe provide korte pari call use kore
+     -   1 ta object ke onno object er method er value hishbe provide korte pari (call) use kore
 
 */
 
@@ -108,7 +107,7 @@ const person1 = {
     lastName: "Doe"
 };
 
-person.fullName(); // undefined undefined    // eivabe dile fullName ke pabe na,
+person.fullName(); // undefined undefined    // eivabe dile fullName ke pabe na, karon kono parameter and arguments nai
   
 
 // kon object ke this mone korbo, seta amra call() function er moddhe diye dibo

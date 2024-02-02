@@ -46,9 +46,9 @@ a(4, 5);   // arguments/value
 /*
     ------------------------    Parameter Rules     -----------------------
 
-    -   JavaScript function definitions do not specify data types for parameters.
+    -   JavaScript function definitions do not specify data types for parameters. (not specify data type)
 
-    -   JavaScript functions do not perform type checking on the passed arguments.
+    -   JavaScript functions do not perform type checking on the passed arguments. (not checking type of arguments)
 
     -   JavaScript functions do not check the number of arguments received.(ja iccha toto arguments pass korte pari)
 
@@ -56,7 +56,7 @@ a(4, 5);   // arguments/value
 
 
 /*
-   ------------------------ Default Parameters ---------------------
+        --------------------------- Default Parameters ---------------------
 
     -   If a function is called with missing arguments (less than declared), the missing values are set to undefined.
 
@@ -73,7 +73,7 @@ console.log(a1(4));   // arguments/value  // NaN - because we provide 1 argument
 
 /*
 
-    --------------------    Default Parameter Values   ---------------
+    --------------------------- Default Parameter Values -----------------------
 
     -   ES6 allows function parameters to have default values.
 
@@ -88,6 +88,8 @@ function myFunction(x, y = 10) {
     return x + y;
   }
 console.log(myFunction(5));   // 15
+
+
 
 
 
@@ -125,7 +127,7 @@ console.log(x);  // 326
 
 function Multi_All(){
     // let num = 0;   // default value 0 hole result 0 ashbe tai 1 kore diyeci(sudu * er jonno)
-    let num = 1;   // default value 0 hole result 0 ashbe tai 1 kore diyeci(sudu * er jonno)
+    let num = 1;     // default value 0 hole result 0 ashbe tai 1 kore diyeci(sudu * er jonno)
 
     for (let i = 0; i < arguments.length; i++){
         num *= arguments[i];
@@ -136,7 +138,7 @@ function Multi_All(){
 
 
 let numbers = Multi_All(2, 4, 6, 8);
-console.log(numbers);   // 
+console.log(numbers);   // 384
 
 
 /*
