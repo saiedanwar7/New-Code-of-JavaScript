@@ -14,7 +14,7 @@
 */
 
 
-/*------------------ avaScript Getter (The get Keyword) -----------------------
+/*------------------ JavaScript Getter (The get Keyword) -----------------------
 
     -   This example uses a lang property to get the value of the language property.
 
