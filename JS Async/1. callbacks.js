@@ -13,19 +13,19 @@
 */
 
 
-// function display(a) {
-//     console.log(a);    // 10
-// }
+function display(a) {
+    console.log(a);    // 10
+}
 
 
-// function Calculator(num1, num2) {
-//     let sum = num1 + num2;
-//     return sum;
-// }
+function Calculator(num1, num2) {
+    let sum = num1 + num2;
+    return sum;
+}
 
 
-// let result = Calculator(5, 5);
-// display(result);
+let result1 = Calculator(5, 5);
+display(result1);
 
 
 
@@ -36,17 +36,17 @@
 
 */
 
-// function display1(a) {
-//     console.log(a);    // 10
-// }
+function display1(a) {
+    console.log(a);    // 10
+}
 
 
-// function Calculator1(num1, num2) {
-//     let sum = num1 + num2;
-//     display(sum);      // problem is ekhane onno function call kore kaj korteci
-// }
+function Calculator1(num1, num2) {
+    let sum = num1 + num2;
+    display(sum);      // problem is ekhane onno function ke call kore kaj korteci
+}
 
-// console.log(Calculator(5, 5));   // 10
+console.log(Calculator(5, 5));   // 10
 
 
 /*
@@ -69,37 +69,37 @@
 
 */
 
-// function display2(some) {
-//     console.log(some);
-// }
+function display2(some) {
+    console.log(some);
+}
 
-// function calculator(num1, num2, callback){   // function name je kono kisu hole hobe
-//     let sum = num1 + num2;
-//     callback(sum);      // that mean ekhane sorashori onno ekta function(disply) ke call korteci na
-// }
+function calculator(num1, num2, callback){   // function name je kono kisu hole hobe
+    let sum = num1 + num2;
+    callback(sum);      // that mean ekhane sorashori onno ekta function(disply) ke call korteci na
+}
 
-// calculator(5, 5, display2)
-
-
+calculator(5, 5, display2)
 
 
 
-// ekhon amra chaile callback er moddhome onno function ke control korte parbo...chaile calculator function theke callback call korbo na hole korbo na
 
-// function display3(some) {
-//     console.log(some);
-// }
 
-// function calculator1(num1, num2, callback){   // function name je kono kisu hole hobe
-//     let sum = num1 + num2;
+// ekhon amra chaile callback er moddhome onno function ke control korte parbo...chaile calculator function theke callback call korbo,  na hole korbo na
+
+function display3(some) {
+    console.log(some);
+}
+
+function calculator1(num1, num2, callback){   // function name je kono kisu hole hobe
+    let sum = num1 + num2;
     
-//     // jodi argument hishabe onno function na dile seta call korbe na
-//     // dispaly function na dile print korbe na, r dile print korbe, calculator function er iccha
-//     if(callback) callback(sum); 
-// }
+    // jodi argument hishabe onno function na dile seta call korbe na
+    // dispaly function na dile print korbe na, r dile print korbe, calculator function er iccha
+    if(callback) callback(sum); 
+}
 
-// calculator1(5, 6, display3);     //  print korbe
-// calculator1(5, 6);               // print korbe na
+calculator1(5, 6, display3);     //  print korbe
+calculator1(5, 6);               // print korbe na
 
 
 
