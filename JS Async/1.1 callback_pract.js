@@ -85,3 +85,24 @@ enroll(function() {
 
 //  Amader dorkar 1ta kaj sesh hobar por onno 1ta kaj ta suru hobe, tai first kaj tar parameter e second kaj ke callback akare diyeci
 //  jodi sob kisu thik thake tahole next step er jonno callback function ke call korbe, r na hole korbe na
+
+
+//  je kaj ta pore korte hobe seta aager(currunt) kaj er parameter hishabe pathaiye diye porer kaj ta korte pari
+
+
+// callback tahole onnek gula kaj hole nested hoye jabe..
+
+// // eita hocche callback hell
+
+// enroll(function() {
+//     progress(function() {
+//         C(function() {
+//             D(function() {
+//                 E(function(){
+
+//                 })
+//             })
+//         })
+//     })
+// })
+ 
