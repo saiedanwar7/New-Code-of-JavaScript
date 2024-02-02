@@ -1,13 +1,14 @@
 /*
     =========================== Function Definitions ========================
 
-    JavaScript functions are defined with the function keyword.
+    JavaScript functions are defined with the (function) keyword.
 
     You can use a function declaration or a function expression.
 
 
     - Function Declarations
     - Function Expressions
+    - Function stored in a variable
     - Function() Constructor
     - Function Hoisting
     - Self-Invoking Functions
@@ -36,14 +37,16 @@ function testFunction(x, y){
   return x + y;
 }
 
-// 
+// function er bitore proti ti statement ke separate korar jonno Semicolons(;) use kora hoy
+// function declaration is not an executable statement, so function er sesh e semicolon na use korlei hobe
 
 
 
 /*
-    -------------------  Function Expressions  ---------------------
+    ---------------------  Function Expressions  ---------------------
 
     -   A JavaScript function can also be defined using an expression.
+    -   An expression is a combination of values, variables, and operators, which computes to a value.
 
     -   A function expression can be stored in a variable:
     
@@ -67,6 +70,8 @@ function b(){
 
 
 /*
+    -------------------------- Function stored in a Variable ----------------------
+
    After a function expression has been stored in a variable, the variable can be used as a function:
 
 */
@@ -114,7 +119,7 @@ console.log(x);  // 24
 
     -   You cannot self-invoke a function declaration.
 
-    -   You have to add parentheses around the function to indicate that it is a function expression:
+    -   You have to add parentheses (function(){}) around the function to indicate that it is a function expression:
 
 
 */
@@ -128,11 +133,11 @@ console.log(x);  // 24
 
 
 
-// function jodi return na kore tahole by default seta hocche return undefined
+// Function ke jodi return na kora hoy tahole by-default seta return - undefined hobe
 
 
 function myFunction(a, b) {
-    // a * b;  // function jodi return na kore tahole by default seta hocche return undefined
+    // a * b;           // function jodi return na kore tahole by default seta hocche return undefined
     return a * b;  
 }
 
@@ -163,22 +168,24 @@ const a = {
 // A function designed to create new objects, is called an object constructor.
 
 
+
+
 /* 
     ----------------------- Functions are Objects ------------------------
 
     -   The typeof operator in JavaScript returns "function" for functions.
     -   But, JavaScript functions can best be described as objects.
     -   JavaScript functions have both properties and methods.
-    -   The arguments.length property returns the number of arguments received when the function was invoked:
-
+    -   The arguments.length property returns the number of arguments received when the function was invoked(call):
 
 */
+
 
 // provide argument length
 
 function myNewFunction(a, b){
     // console.dir(arguments);
-    // return arguments;   //function er arguments gula ke serial e array akare print kore 
+    // return arguments;       //function er arguments gula ke serial e array akare print kore 
     return arguments.length;   // koyta argument dibo seta return kore
 }
 
@@ -199,9 +206,11 @@ function myFunction(a, b) {
 
 
 
+
+
 /*
 
-    ------------------------ Arrow Functions ------------------------
+    ---------------------------- Arrow Functions ---------------------------------
 
     -   Arrow functions allows a short syntax for writing function expressions.
 
@@ -219,18 +228,23 @@ const fun = function (x, y){
 
 const fun1 = (x, y) => x * y;
 
+
 //  without parameter
 
 const x1 = () => 5;
 
 
+
 /*
-    -   Arrow functions do not have their own this. They are not well suited for defining object methods.
+    -   Arrow functions do not have their own this(arrow function er this keyword nai) They are not well suited for defining object methods.
     -   Arrow functions are not hoisted. They must be defined before they are used.
     -   Using const is safer than using var, because a function expression is always constant value
-    -  Arrow function not know this
+    -   Arrow function not know this
 
 */
+
+// object er property te arrow function na use korai valo
+
 const object = {
     a: 5,
     b: () => {
@@ -239,14 +253,17 @@ const object = {
 }
 
 
+
+
 /*
-You can only avoid/omit the return keyword and the curly brackets if the function is a single statement. 
-Because of this, it might be a good habit to always keep them:
+    -   You can only avoid/omit the return keyword and the curly brackets if the function is a single statement. 
+        Because of this, it might be a good habit to always keep them:
 
 */
 
 const x2 = (x, y) =>{return x * y};
 console.log(x2(2, 4));   // 8
+
 
 // without return keyword
 

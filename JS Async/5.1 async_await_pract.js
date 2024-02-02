@@ -1,4 +1,5 @@
 
+//--------------------------- async_await -----------------------------
 
 /*
     -   joto gula Promise function thakbe sekhane await use korbo
@@ -9,10 +10,6 @@
     -   r error gula promise er moto catch e thakbe 
 
 */
-
-
-
-//--------------------------- async_await -----------------------------
 
 
 const paymentSuccess = true;
@@ -59,16 +56,30 @@ function progress() {
 
 
 // get Certificate 
+// function getCertificate() {
+//     console.log('Preparing your certificate!');
+
+//     const promise = new Promise(function(resolve){
+//         setTimeout(function(){
+//             resolve("Congrats! You got the certificate")   // ekhane value ta pabo
+//         }, 1000)
+//     });
+//     return promise;
+// }
+
+
+// je function e sudu resolve ache sekhane eiway te shortcut use korte parbo- Promise.resolve diye
+
 function getCertificate() {
     console.log('Preparing your certificate!');
 
-    const promise = new Promise(function(resolve){
-        setTimeout(function(){
-            resolve("Congrats! You got the certificate")   // ekhane value ta pabo
-        }, 1000)
-    });
+    const promise = Promise.resolve("Congrats! You got the certificate")   // ekhane value ta pabo
+
     return promise;
 }
+
+
+
 
 
 // enroll(function() {
