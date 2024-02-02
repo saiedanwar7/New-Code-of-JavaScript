@@ -1,17 +1,27 @@
+
+
 /*
-    ========================== Apply Promise =====================
+    -   joto gula Promise function thakbe sekhane await use korbo
+    -   resolve jodi value return kore thake setake await diye ekta variable er moddhe dorte hobe 
+    -   je kaj gula error er moddhe hobe na..segulake try er moddhe rakhbo, that mean (then) gula ke
+        try (then) success
+
+    -   r error gula promise er moto catch e thakbe 
 
 */
 
 
+
+//--------------------------- async_await -----------------------------
+
+
 const paymentSuccess = true;
 // const paymentSuccess = false;
+const marks = 70;
 // const marks = 90;
-const marks = 90;
 
 
 // enrollment
-
 function enroll() {  
     console.log('Course enrollment is in progress.')
 
@@ -30,7 +40,6 @@ function enroll() {
 
 
 // course progress
-
 function progress() {
     console.log('Course on progress....');
 
@@ -50,7 +59,6 @@ function progress() {
 
 
 // get Certificate 
-
 function getCertificate() {
     console.log('Preparing your certificate!');
 
@@ -72,18 +80,37 @@ function getCertificate() {
 
 */
 
-enroll()
-    .then(progress)    // then ekta function body except kore
-    .then(getCertificate)
-    .then(function(value){     // getCertificate er resolve re value print kore
-        console.log(value)
-    })
-    .catch(function(err){   // reject er value print korbe
-        console.log(err)
-    })
+
+
+// joto gula Promise function thakbe sekhane await use korbo
+// resolve jodi value return kore thake setake await diye ekta variable er moddhe dorte hobe dorte hobe
+// je kaj gula error er moddhe hobe na..segulake try er moddhe rakhbo, that mean (then) gula ke
+// try (then) 
+// r error gula promise er moto catch e thakbe 
+
+
+async function course() {
+    try{
+        await enroll();
+        await progress();
+        const message = await getCertificate();
+
+        console.log(message);
+
+    } catch(err){
+        console.log(err);
+    }
+}
+
+course();
+
+// enroll()
+//     .then(progress)    // then ekta function body except kore
+//     .then(getCertificate)
+//     .then(function(value){     // getCertificate er resolve re value print kore
+//         console.log(value)
+//     })
+//     .catch(function(err){   // reject er value print korbe
+//         console.log(err)
+//     })
    
-
-
-// const paymentSuccess = true;
-
-// const marks = 70;
