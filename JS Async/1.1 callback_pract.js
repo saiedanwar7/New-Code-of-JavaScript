@@ -10,6 +10,13 @@
     //  Amader dorkar 1ta kaj sesh hobar por onno 1ta kaj ta suru hobe, tai first kaj tar parameter e second kaj ke callback akare diyeci
     //  jodi sob kisu thik thake tahole next step er jonno callback function ke call korbe, r na hole korbe na
 
+    //  je kaj ta pore korte hobe seta ke amra callback akare current function e pathiye dibo and sei function er moddhe 
+    //  asychronous ta hoye jabar por sei jaigai tai callback function call kore dibe, this is the process
+
+    //  Amader dorkar 1ta kaj sesh hobar por onno 1ta kaj ta suru hobe, tai first kaj tar parameter e second kaj ke callback akare diyeci
+    //  jodi sob kisu thik thake tahole next step er jonno callback function ke call korbe, r na hole korbe na
+    //  je kaj ta pore korte hobe seta aager(currunt) kaj er parameter hishabe pathaiye diye porer kaj ta korte pari
+
 
 */
 
@@ -72,7 +79,8 @@ function getCertificate() {
 
 // enrollment ekta function nibe tai function akare anonymous function dibo, karon enrollment e parameter lagbe hishabe progress ke callback hishabe diyeci
 // enrollment er parameter ta hocche progress parameter
-// ei way te sorasori ekta function call hoye jacche na, enrollment sesh hobar pore progress function e dukbe,
+// ei way te sorasori ekta function call hoye jacche na, enrollment sesh hobar pore progress function e dukbe,'
+// jehetu parameter dorkar tai anonymous function  niyeci
 // jokhon anonymous function ke call korbe tokhon indirectly progress function call hoye jabe
 
 enroll(function() {
@@ -85,8 +93,6 @@ enroll(function() {
 
 //  Amader dorkar 1ta kaj sesh hobar por onno 1ta kaj ta suru hobe, tai first kaj tar parameter e second kaj ke callback akare diyeci
 //  jodi sob kisu thik thake tahole next step er jonno callback function ke call korbe, r na hole korbe na
-
-
 //  je kaj ta pore korte hobe seta aager(currunt) kaj er parameter hishabe pathaiye diye porer kaj ta korte pari
 
 

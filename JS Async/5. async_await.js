@@ -121,7 +121,7 @@ function getCertificate() {
 
 
 // joto gula Promise function thakbe sekhane await use korbo
-// resolve jodi value return kore thake setake await diye ekta variable er moddhe dorte hobe dorte hobe
+// resolve jodi value return kore thake setake await diye ekta variable er moddhe dorte hobe 
 // je kaj gula error er moddhe hobe na..segulake try er moddhe rakhbo, that mean (then) gula ke
 // try (then) 
 // r error gula promise er moto catch e thakbe 

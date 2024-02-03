@@ -4,11 +4,17 @@
 
     -. That mean je kaj ta pore hobe setar jonno ekta promises kore rakha je ei kaj ta sesh hole ami porer kaj ta korbo
 
+    Promises are the foundation of asynchronous programming in modern JavaScript. 
+    A promise is an object returned by an asynchronous function, which represents the current state of the operation. 
+    At the time the promise is returned to the caller, the operation often isn't finished, 
+    but the promise object provides methods to handle the eventual success or failure of the operation.
+
 
 
 
 */
 
+// https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Promises
 
 /*
 

@@ -73,11 +73,14 @@ function getCertificate() {
 */
 
 enroll()
-    .then(progress)    // then ekta function body except kore
+    .then(progress)           // then ekta function body except kore
     .then(getCertificate)
     .then(function(value){     // getCertificate er resolve re value print kore
         console.log(value)
     })
+
+    // multiple error catch by one catch block
+    
     .catch(function(err){   // reject er value print korbe
         console.log(err)
     })
