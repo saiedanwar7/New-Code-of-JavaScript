@@ -163,3 +163,28 @@ const person3 = {
 
 let Saied_info = newPerson.fullName.call(person3, "Feni", "Bangladesh");
 console.log(Saied_info);   // Saied Anwar, from Feni Bangladesh
+
+
+
+
+// ------------ extra problem -------------
+
+// const obj = {
+//     names: null,
+//     city: undefined,
+//     age: false,
+//     country: 0,
+// };
+
+// const {
+//     names= "Sumon",
+//     city= "khulna",
+//     age= 38,
+//     country= "Bangladesh",
+// } = obj
+
+
+// console.log(names)
+// console.log(city)
+// console.log(age)
+// console.log(country)

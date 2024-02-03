@@ -13,6 +13,65 @@
 */
 
 
+/*
+    ----------------------  Function Sequence   -----------------------
+
+    -   JavaScript functions are executed in the sequence they are called. Not in the sequence they are defined.
+
+    -   This example will end up displaying "Goodbye":
+    -   myDisplayer is the name of a function, it is passed to arguments
+
+*/
+
+function myDiplayer(a){
+    console.log(a);     // Hello, Goodbye
+}
+
+function myFirst() {
+    myDiplayer("Hello");
+}
+
+function mySecond() {
+    myDiplayer("Goodbye");
+}
+
+myFirst();
+mySecond();
+
+
+// This example will end up displaying "Hello":
+
+
+function myDiplayer1(a){
+    console.log(a);    // Goodbye, Hello
+}
+
+function myFirst1() {
+    myDiplayer1("Hello");
+}
+
+function mySecond1() {
+    myDiplayer1("Goodbye");
+}
+
+
+mySecond1();
+myFirst1();
+
+
+/*
+        --------------------------  Sequence Control   ----------------------------
+
+    -   Sometimes you would like to have better control over when to execute a function.
+
+    -   Suppose you want to do a calculation, and then display the result.
+
+    -   You could call a calculator function (Calculator), save the result, and then call another function (display) to display the result:
+    -   the problem is that we call two function then display the result.
+*/
+// 1. problem example 
+
+
 function display(a) {
     console.log(a);    // 10
 }
@@ -36,6 +95,8 @@ display(result1);
 
 */
 
+// 2. problem example 
+
 function display1(a) {
     console.log(a);    // 10
 }
@@ -48,11 +109,11 @@ function Calculator1(num1, num2) {
 
 console.log(Calculator(5, 5));   // 10
 
-
-/*
-    -   The problem with the second example, is that you cannot prevent the calculator function from displaying the result.
-    -   ekhane Calculator function independent na, display function er upor nirborshil
-    -   All function should be independent.
+ /*
+   -   The problem with the second example, is that you cannot prevent the calculator function from displaying the result.
+   -   ekhane Calculator function independent na, display function er upor nirborshil
+   -   All function should be independent.
+   -   Display function kaj na korle calculator tar result print korte parbe na   
 
 */
 
@@ -62,9 +123,10 @@ console.log(Calculator(5, 5));   // 10
 
     =========================  JavaScript Callbacks  =============================
     
-    A callback is a function passed as an argument to another function.
+    -   A callback is a function passed as an argument to another function.
 
-    Using a callback, you could call the calculator function (myCalculator) with a callback (myCallback), and let the calculator function run the callback after the calculation is finished:
+    -   Using a callback, you could call the calculator function (myCalculator) with a callback (myCallback), 
+        and let the calculator function run the callback after the calculation is finished:
 
 
 */
@@ -75,10 +137,10 @@ function display2(some) {
 
 function calculator(num1, num2, callback){   // function name je kono kisu hole hobe
     let sum = num1 + num2;
-    callback(sum);      // that mean ekhane sorashori onno ekta function(disply) ke call korteci na
+    callback(sum);            // that mean ekhane sorashori onno ekta function(disply) ke call korteci na
 }
 
-calculator(5, 5, display2)
+calculator(5, 15, display2)
 
 
 
@@ -93,8 +155,13 @@ function display3(some) {
 function calculator1(num1, num2, callback){   // function name je kono kisu hole hobe
     let sum = num1 + num2;
     
-    // jodi argument hishabe onno function na dile seta call korbe na
-    // dispaly function na dile print korbe na, r dile print korbe, calculator function er iccha
+    
+    /* 
+      -  dispaly function na dile print korbe na, r dile print korbe, calculator function er iccha
+
+      -  ekhon callback function ke to diyeci but amra jodi calculator function call korar somoy argument hishabe callback 
+         function ke na di, tahole seta print korbe na 
+    */
     if(callback) callback(sum); 
 }
 
@@ -124,7 +191,7 @@ function calculator2(num1, num2, callback){   // function name je kono kisu hole
 
 
 let result = calculator2(4, 5);   // ekhane argument hishabe callback function ke use kori nai..
-console.log(result);            // 9
+console.log(result);              // 9
 
 
 
@@ -134,22 +201,22 @@ console.log(result);            // 9
 // callback function er moddhe parent function er result provide kora hoyeche
 
 
-function calculator3(num1, num2, callback) {
+function calculator3(num1, num2, callback) {    // 3rd parameter e ekta function niteche
     let sum = num1 + num2;
 
-    if(callback) callback(sum);
+    if(callback) callback(sum);                  // callback e (sum) parameter use kora hoyche jeta result diye dora hoyeche
 
     return sum;
 }
 
-calculator3(5, 8, function (result) {
+calculator3(5, 8, function (result) {    // amra ekhane direct function ei use kore kaj korte pari
     console.log(result);   // 13
 })
 
 
 
 /*
-    --------------- When to Use a Callback? ------------------
+    ----------------- When to Use a Callback? ------------------
 
     The examples above are not very exciting.
 
