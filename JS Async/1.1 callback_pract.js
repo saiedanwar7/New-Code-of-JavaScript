@@ -70,13 +70,13 @@ function getCertificate() {
 // eivabe kaj hocche na tai amader 3 ta kaj korte hobe.
 
 
-// enrollment ekta function nibe tai function akare anonymous function dibo, karon enrollment e parameter lagbe
+// enrollment ekta function nibe tai function akare anonymous function dibo, karon enrollment e parameter lagbe hishabe progress ke callback hishabe diyeci
 // enrollment er parameter ta hocche progress parameter
 // ei way te sorasori ekta function call hoye jacche na, enrollment sesh hobar pore progress function e dukbe,
 // jokhon anonymous function ke call korbe tokhon indirectly progress function call hoye jabe
 
 enroll(function() {
-    progress(getCertificate)
+    progress(getCertificate)     // getCertificate e r callback function parameter hishabe nai tai ekhanei sesh.
 });
 
 
